@@ -1,0 +1,18 @@
+<div class="row fluid">
+  <div class="col-6 height">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let frase of phrases">
+        <p style="font-size:14px; margin: 8px;"> {{frase.text}}</p>
+        <p style="font-size:10px; float: right; margin: 8px;">{{frase.author}}</p>
+      </ng-template>
+
+    </owl-carousel-o>
+
+  </div>
+
+  <div class="col-6">
+    hola
+  </div>
+
+
+</div>

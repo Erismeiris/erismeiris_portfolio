@@ -1,0 +1,63 @@
+:root {
+    --bg-color: hsl(49 37% 94%);
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 24;
+  }
+
+
+.img{
+    padding: 10px;
+    width: 200px;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    background-color: #5f5c5c;
+    height:200px;
+}
+
+.photo{
+    background-image: url(/assets/images/unplash.jpg);
+    background-size:cover;
+    background-repeat: none;
+    position: relative;
+    
+}
+
+
+p{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ccc; 
+    
+}
+.span{
+    position: absolute;
+    width: 1%;
+    right: 9%;
+    border-left: #161515 solid 4px;
+    animation-name: typewriter;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-timing-function: steps(19);
+}
+@keyframes typewriter{
+    from{
+        width: 27%;
+    }
+    to{
+        width: 0%;
+    }
+   
+}
+
+
+button img{
+    width: 20px;
+}
+button{
+    width: 100%;
+    font-size:medium;
+}

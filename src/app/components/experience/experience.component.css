@@ -1,0 +1,39 @@
+
+
+.firstBox{
+border-left: solid 4px green;
+box-shadow: 2px 1px 1px 1px darkgray;
+} 
+
+.firstBox:hover{
+box-shadow: 2px 1px 1px 1px green;
+
+
+}
+
+
+.secondBox{
+border: solid 4px rgb(5, 170, 79);
+background-color: rgb(245, 245, 250);
+position: absolute;
+top: 40%;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+.secondBox::after{
+content: "";
+position: absolute;
+top: 50%;
+left: 160%;
+transform: translate(-50%, -50%);
+width: 40px;
+height: 5px;
+background-color: rgb(5, 170, 79);
+z-index: -1;
+
+}
+
+.secondBox:hover{
+    background-color: green;
+}
