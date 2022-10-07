@@ -7,6 +7,7 @@
     text-align: center;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
+    
 }
 
 .menu{
@@ -14,6 +15,7 @@
     padding: 0;
     list-style: none;
     position: fixed;
+    
 }
 .menu li{
     list-style: none;

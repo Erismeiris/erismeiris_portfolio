@@ -10,6 +10,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from '../components/about/about.component';
 import { ExperienceComponent } from '../components/experience/experience.component';
 import { SkillsComponent } from '../components/skills/skills.component';
+import { ProjectsComponent } from '../components/projects/projects.component';
+import { ContactComponent } from '../components/contact/contact.component';
 
 
 
@@ -23,6 +25,8 @@ import { SkillsComponent } from '../components/skills/skills.component';
     AboutComponent,
     ExperienceComponent,
     SkillsComponent,
+    ProjectsComponent,
+    ContactComponent
 
 
   ],
@@ -42,7 +46,9 @@ import { SkillsComponent } from '../components/skills/skills.component';
     CenterComponent,
     AboutComponent,
     ExperienceComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProjectsComponent,
+    ContactComponent
     
     
   ]

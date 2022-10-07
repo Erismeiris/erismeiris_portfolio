@@ -1,0 +1,54 @@
+
+.line{
+    position: absolute;
+    width: 15%;
+    height: 12px;
+    background-color: #5f5c5c;
+    border-radius: 10px;
+}
+
+.line::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width: 10%;
+    height: 18%;
+    background-color:#6bbc08 ;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #5f5c5c;
+    border-radius: 10px;
+    animation-name: lineffect;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    
+
+}
+
+@keyframes lineffect {
+    0%{
+        left: 0%;
+        width: 10%;
+    }
+    100%{
+        left: 65%;
+        width: 35%;
+    }
+    
+}
+
+
+.img{
+    height: 240px;
+    
+}
+
+
+.body{
+    min-height: 500px;
+}
+.footer{
+    min-height: 100px;
+}
