@@ -20,7 +20,7 @@
     background-image: url(/assets/images/unplash.jpg);
     background-size:cover;
     background-repeat: none;
-    position: relative;
+    height: 100%;
     
 }
 
@@ -31,26 +31,36 @@ p{
     color: #ccc; 
     
 }
-.span{
+
+.line::after{
+    content: "";
     position: absolute;
-    width: 1%;
-    right: 9%;
-    border-left: #161515 solid 4px;
-    animation-name: typewriter;
-    animation-duration: 3s;
+    left: 0%;
+    top: 0px;
+    width: 100%;
+    height: 70%;
+    background-color:#6c757d;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    animation-name: typeffect;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-delay: 2s;
     animation-direction: alternate;
-    animation-timing-function: steps(19);
+    animation-timing-function: ease;
 }
-@keyframes typewriter{
-    from{
-        width: 27%;
+
+@keyframes typeffect {
+    0%{
+        left: 0%;
+        width: 100%;
+        
     }
-    to{
-        width: 0%;
+    100%{
+        left: 90%;
+        width: 5%;
+        
     }
-   
+    
 }
 
 
