@@ -96,28 +96,28 @@
 
 
 <div class="row mt-5">
-  <div class="col-10 offset-md-1">
+  <div class="col-lg-10 offset-md-1">
     <div class="card">
       <div class="row">
-        <div class="col-3 position-relative">
+        <div class="col-3 position-relative d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block">
           <div class="position-absolute top-50 start-50 translate-middle">
             <i class="bi bi-chat-left-text-fill fs-4 text-success"></i>
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
           <h4>Send me a message</h4>
-          <form>
+          <form [formGroup]="messageForm" (ngSubmit)="sendMessage()">
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              <input type="text" formControlName="name" class="form-control" id="name" placeholder="Enter your name">
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your email">
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="3"></textarea>
+              <textarea class="form-control" formControlName="message" id="message" rows="3" placeholder="Write here which service you want."></textarea>
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
           </form>
