@@ -5,14 +5,15 @@
         <th>Name</th>
         <th>Email</th>
         <th>Message</th>
-        <th>Status</th>
+        <th>Date</th>
       </tr>
 
     <tr *ngFor="let item of messages">
     <td>{{item.name}}</td>
     <td>{{item.email}}</td>
     <td>{{item.message}}</td>
-    <td>Pending</td>
+    <td>{{item.date}}</td>
+    
     </tr>
     </table>
   </div>

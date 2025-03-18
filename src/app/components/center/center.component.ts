@@ -9,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CenterComponent implements OnInit {
 
-  constructor() { }
+  experienceYears = 5;
+  started = 2019;
+
+  date = new Date();
+  year = this.date.getFullYear();
+
+  constructor() { 
+this.experienceYears = this.year - this.started;
+  }
 
   ngOnInit() {}
 

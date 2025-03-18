@@ -9,14 +9,16 @@ export class AboutComponent implements OnInit {
 
 
   public age: number = 25;
-
+  experiencesYears = 5;
+  started = 2019;
+  public birthYear = 1985;
 
   date = new Date();
 
 
   constructor() { 
-    const birthYear = 1985;
-    this.age = this.date.getFullYear() - birthYear;
+    this.age = this.date.getFullYear() - this.birthYear;
+    this.experiencesYears = this.date.getFullYear() - this.started;
   }
 
   ngOnInit() {

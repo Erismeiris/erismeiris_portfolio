@@ -9,10 +9,16 @@ import { MessageService } from 'src/app/services/message.service';
 })
 export class ContactComponent implements OnInit {
 
+  date= new Date();
+  messageDate = this.date.getFullYear();
+  get currentDate() {
+    return new Date();
+  }
   public messageForm = this.fb.group({
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
-    message:['', [Validators.required,Validators.minLength(10) ]]
+    message:['', [Validators.required,Validators.minLength(10) ]],
+    date: ['', Validators.required]
     
   })
 
@@ -22,7 +28,14 @@ export class ContactComponent implements OnInit {
   }
 
   async sendMessage(){
-    const resp =  await this.messageServices.addMessage(this.messageForm.value)
+  this.messageForm.patchValue({ date: this.currentDate.toDateString() });
+  await this.messageServices.addMessage({
+    name: this.messageForm.get('name')!.value,
+    email: this.messageForm.get('email')!.value,
+    message: this.messageForm.get('message')!.value,
+    date: this.messageForm.get('date')!.value
+  });
+   
    alert('Message sent succefuly')
    this.messageForm.reset();
   }
